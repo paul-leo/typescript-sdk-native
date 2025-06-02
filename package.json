@@ -1,6 +1,6 @@
 {
   "name": "mcp-sdk-local",
-  "version": "1.12.1",
+  "version": "1.12.2",
   "description": "Model Context Protocol implementation for TypeScript",
   "license": "MIT",
   "author": "Anthropic, PBC (https://anthropic.com)",
@@ -19,10 +19,37 @@
     "mcp",
     "mcp-local"
   ],
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "module": "./dist/esm/index.js",
   "exports": {
     "./*": {
       "import": "./dist/esm/*",
       "require": "./dist/cjs/*"
+    },
+    "./client/local": {
+      "import": "./dist/esm/client/local.js",
+      "require": "./dist/cjs/client/local.js"
+    },
+    "./client/index": {
+      "import": "./dist/esm/client/index.js",
+      "require": "./dist/cjs/client/index.js"
+    },
+    "./server/mcp": {
+      "import": "./dist/esm/server/mcp.js",
+      "require": "./dist/cjs/server/mcp.js"
+    },
+    "./server/local": {
+      "import": "./dist/esm/server/local.js",
+      "require": "./dist/cjs/server/local.js"
+    },
+    "./client/*": {
+      "import": "./dist/esm/client/*",
+      "require": "./dist/cjs/client/*"
+    },
+    "./server/*": {
+      "import": "./dist/esm/server/*",
+      "require": "./dist/cjs/server/*"
     }
   },
   "typesVersions": {
