@@ -1,5 +1,5 @@
 {
-  "name": "@modelcontextprotocol/sdk",
+  "name": "mcp-sdk-local",
   "version": "1.12.1",
   "description": "Model Context Protocol implementation for TypeScript",
   "license": "MIT",
@@ -16,7 +16,8 @@
   },
   "keywords": [
     "modelcontextprotocol",
-    "mcp"
+    "mcp",
+    "mcp-local"
   ],
   "exports": {
     "./*": {
@@ -42,6 +43,7 @@
     "lint": "eslint src/",
     "test": "jest",
     "start": "npm run server",
+    "example:local": "tsx ./src/examples/local/simpleLocalExample.ts",
     "server": "tsx watch --clear-screen=false src/cli.ts server",
     "client": "tsx src/cli.ts client"
   },
